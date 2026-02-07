@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Web Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">MyHub</div>
+    <div class="nav-links">
+      <button class="nav-btn active">Home</button>
+      <button class="nav-btn">Apps</button>
+      <button class="nav-btn">Games</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to My Web Hub</h1>
+      <p>A clean, modern place to open your favorite sites.</p>
+      <div class="address-bar">
+        <input id="urlInput" type="text" placeholder="Enter a URL (https://...)">
+        <button id="goBtn">Go</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card" data-url="https://www.wikipedia.org">
+        <h2>Wikipedia</h2>
+        <p>Learn about anything.</p>
+      </div>
+      <div class="card" data-url="https://www.youtube.com">
+        <h2>YouTube</h2>
+        <p>Watch videos.</p>
+      </div>
+      <div class="card" data-url="https://www.github.com">
+        <h2>GitHub</h2>
+        <p>Explore code.</p>
+      </div>
+    </section>
+
+    <section class="viewer">
+      <h2>Page Viewer</h2>
+      <iframe id="viewerFrame" src="" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
