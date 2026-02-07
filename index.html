@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Web Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Chihuahua_Nation</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="logo">MyHub</div>
-    <div class="nav-links">
-      <button class="nav-btn active">Home</button>
-      <button class="nav-btn">Apps</button>
-      <button class="nav-btn">Games</button>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="logo">Chihuahua Nation</div>
+      <button class="side-btn active" data-page="home">Home</button>
+      <button class="side-btn" data-page="arcade">Arcade</button>
     </div>
-  </header>
+    <div class="sidebar-bottom">
+      <button class="side-btn" data-page="settings">⚙️ Settings</button>
+    </div>
+  </aside>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to My Web Hub</h1>
-      <p>A clean, modern place to open your favorite sites.</p>
-      <div class="address-bar">
-        <input id="urlInput" type="text" placeholder="Enter a URL (https://...)">
-        <button id="goBtn">Go</button>
+  <!-- Main content -->
+  <main class="content">
+    <!-- Address bar -->
+    <div class="address-bar">
+      <input id="urlInput" type="text" placeholder="games/1/index.html" />
+      <button id="goBtn">Go</button>
+    </div>
+
+    <!-- Pages -->
+    <section id="page-home" class="page active">
+      <h1>Home</h1>
+      <p>Welcome to your game hub.</p>
+    </section>
+
+    <section id="page-arcade" class="page">
+      <h1>Arcade</h1>
+      <div class="grid">
+        <!-- GAME CARDS GO HERE -->
+
+        <!-- Example card for game "1" -->
+        <!-- Game HTML:  games/1/index.html -->
+        <!-- Image:      images/1.png -->
+        <div class="card" data-url="Cookie Clicker/1/index.html">
+          <img src="images/1.png" class="card-img" />
+          <div class="card-overlay"><h2>1 Game</h2></div>
+        </div>
+
+        <!-- Duplicate this block for more games:
+        <div class="card" data-url="games/game2/index.html">
+          <img src="images/game2.png" class="card-img" />
+          <div class="card-overlay"><h2>Game 2</h2></div>
+        </div>
+        -->
       </div>
     </section>
 
-    <section class="grid">
-      <div class="card" data-url="https://www.wikipedia.org">
-        <h2>Wikipedia</h2>
-        <p>Learn about anything.</p>
-      </div>
-      <div class="card" data-url="https://www.youtube.com">
-        <h2>YouTube</h2>
-        <p>Watch videos.</p>
-      </div>
-      <div class="card" data-url="https://www.github.com">
-        <h2>GitHub</h2>
-        <p>Explore code.</p>
-      </div>
+    <section id="page-settings" class="page">
+      <h1>Settings</h1>
+      <p>Settings UI here.</p>
     </section>
 
+    <!-- Viewer controls -->
+    <div class="viewer-controls">
+      <button id="refreshBtn">Refresh</button>
+      <button id="fullscreenBtn">Fullscreen</button>
+      <button id="launchBtn">Launch</button>
+    </div>
+
+    <!-- Iframe viewer -->
     <section class="viewer">
-      <h2>Page Viewer</h2>
       <iframe id="viewerFrame" src="" loading="lazy"></iframe>
     </section>
   </main>
